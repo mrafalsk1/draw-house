@@ -23,7 +23,7 @@ class Game:
         self.ground = Ground(width, height, colors)
         self.house = House(width // 3, height // 2, width // 3, height // 3, colors)
 
-        self.running = False
+        self.running = True
         self.clock = pygame.time.Clock()
         self.fps = 60
 
@@ -39,7 +39,6 @@ class Game:
         pygame.display.flip()
 
     def run(self):
-        self.running = True
         while self.running:
             self.handle_events()
             self.render()
